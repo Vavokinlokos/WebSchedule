@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Schedule</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/style.css}"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header th:include="page :: header"></header>
+            <div class="center-block center-wrapper">
+                <div class="jumbotron text-center">
+                    <h2 th:text="#{index.jumbotron.head}">Welcome!</h2>
+                    <p th:text="#{index.jumbotron.body}">Welcome to our schedule</p>
+                    <p><a th:href="@{/forStudents}" class="btn btn-primary" th:text="#{index.jumbotron.button}">Go to schedule</a></p>
+                </div>
+                <div class="">
+                    <h2 class="text-center" th:text="#{index.lastNews}">Last news</h2>
+                    <ul class="text-left">
+                        <li th:each="newsItem : ${news}">
+                            <p>
+                                <span class="time" th:text="${#dates.format(newsItem.date, 'dd.LL.yy')}"></span>
+                                <span th:text="${newsItem.content}"></span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer th:include="page :: footer"></footer>
+    </div>
+</body>
+</html>

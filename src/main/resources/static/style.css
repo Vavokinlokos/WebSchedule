@@ -1,0 +1,139 @@
+table, center {
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: Pristina;
+    src: url(fonts/Pristina.ttf);
+}
+
+.logo {
+    font-family: Pristina, "Times New Roman", cursive;
+    font-size: 2em;
+    color: rgb(97, 95, 77);
+}
+
+.scheduleTable {
+    background-color: rgba(225, 225, 225, 0.4);
+    border-radius: 1.5em;
+}
+
+.center-wrapper {
+    width: 80%;
+}
+
+.select-form {
+    margin: 1% 0;
+}
+
+.select-form .form-group {
+    margin-right: 2%;
+}
+
+.form-buttons a {
+    margin-right: 5%;
+}
+
+.adminMenu {
+    margin-bottom: 1%;
+}
+
+.deleteForm {
+    display: inline;
+}
+
+.time {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.copy {
+    padding-top: 2.5%;
+    color: white;
+}
+
+.copy a:hover {
+    color:white;
+    text-decoration: none;
+}
+
+.languageSelect {
+    float: right;
+}
+
+.languageImg {
+    width: 2.5em;
+    height: 1.5em;
+    border-radius: 15%;
+}
+
+ul.mobileLanguageSelect {
+    margin-top: 1.2em;
+}
+
+.mobileLanguageSelect li {
+    display: inline;
+    margin-left: .5em;
+}
+
+.mobileLanguageSelect li a {
+    color: #fff;
+}
+
+.mobileLanguageSelect li a:hover {
+    color: #18bc9c;
+    text-decoration: none;
+}
+
+.subjects {
+    transition: display 2s;
+}
+
+html,
+body {
+    height: 100%;
+}
+.wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.content {
+    display: table-row;
+    height: 100%;
+}
+
+footer {
+    background: #2c3e50;
+    height: 90px;
+}
+
+.number-col {
+    width: 5%;
+}
+
+.time-col {
+    width: 10%;
+}
+
+.subject-col {
+    width: 30%;
+}
+
+.type-col {
+    width: 10%;
+}
+
+.teacher-col, .group-col {
+    width: 25%;
+}
+
+.room-col {
+    width: 10%;
+}
+
+.logout {
+    color: red !important;
+    font-weight: bold;
+}

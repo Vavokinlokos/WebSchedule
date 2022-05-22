@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<body>
+<header th:fragment="header">
+    <nav class="navbar navbar-default">
+        <div class="center-block center-wrapper">
+            <div class="navbar-header">
+                <a class="navbar-brand logo" th:href="@{/}">Schedule</a>
+                <ul class="visible-xs mobileLanguageSelect">
+                    <li><a th:href="@{?lang=en}">English</a></li>
+                    <li><a th:href="@{?lang=ru}">Russian</a></li>
+                    <li><a th:href="@{?lang=ua}">Ukrainian</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li><a th:href="@{/forStudents}" th:text="#{mainMenu.forStudents}">For students</a></li>
+                    <li><a th:href="@{/forTeachers}" th:text="#{mainMenu.forTeachers}">For teachers</a></li>
+                    <li><a th:href="@{/exams}" th:text="#{mainMenu.exams}">Exams</a></li>
+                    <li sec:authorize="isAuthenticated()"><a class="logout" th:href="@{/logout}" th:text="#{login.logout}">Logout</a></li>
+                </ul>
+                <ul class="nav navbar-nav languageSelect hidden-xs">
+                    <li><a th:href="@{?lang=en}"><img class="languageImg" th:src="@{/static/img/en.gif}" alt="English"/></a></li>
+                    <li><a th:href="@{?lang=ru}"><img class="languageImg" th:src="@{/static/img/ru.gif}" alt="Русский"/></a></li>
+                    <li><a th:href="@{?lang=ua}"><img class="languageImg" th:src="@{/static/img/ua.gif}" alt="Українська"/></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div th:fragment="adminMenu" class="center-block select-form">
+    <div class="alert alert-success" th:if="${message}">
+        <strong class="text-bold" th:text="${message}">Message</strong>
+    </div>
+    <div class="alert alert-danger" th:if="${errorMessage}">
+        <strong class="text-bold" th:text="${errorMessage}">Message</strong>
+    </div>
+    <div class="adminMenu">
+        <ul class="nav nav-tabs">
+            <li th:class="${currentTab eq 'news'? 'active': ''}"><a th:href="@{/admin/news}" th:text="#{admin.menu.editNews}">
+                Edit news</a></li>
+            <li th:class="${currentTab eq 'schedule'}? 'active': ''"><a th:href="@{/admin/schedule}" th:text="#{admin.menu.editSchedule}">
+                Edit schedule</a></li>
+            <li th:class="${currentTab eq 'exams'}? 'active': ''"><a th:href="@{/admin/exams}" th:text="#{admin.menu.editExams}">
+                Edit schedule</a></li>
+            <li th:class="${currentTab eq 'groups'}? 'active': ''"><a th:href="@{/admin/groups}" th:text="#{admin.menu.editGroups}">
+                Edit groups</a></li>
+            <li th:class="${currentTab eq 'subjects'? 'active': ''}"><a th:href="@{/admin/subjects}" th:text="#{admin.menu.editSubjects}">
+                Edit subjects</a></li>
+            <li th:class="${currentTab eq 'teachers'? 'active': ''}"><a th:href="@{/admin/teachers}" th:text="#{admin.menu.editTeachers}">
+                Edit teachers</a></li>
+            <li th:class="${currentTab eq 'types'? 'active': ''}"><a th:href="@{/admin/types}" th:text="#{admin.menu.editTypes}">
+                Edit types</a></li>
+            <li th:class="${currentTab eq 'buzzers'? 'active': ''}"><a th:href="@{/admin/buzzers}" th:text="#{admin.menu.editBuzzers}">
+                Edit buzzers</a></li>
+            <li th:class="${currentTab eq 'settings'? 'active': ''}"><a th:href="@{/admin/settings}" th:text="#{admin.menu.editSettings}">
+                Edit settings</a></li>
+        </ul>
+    </div>
+</div>
+<footer th:fragment="footer">
+</footer>
+</body>
+</html>
