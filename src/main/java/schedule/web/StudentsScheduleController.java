@@ -64,7 +64,7 @@ public class StudentsScheduleController {
             }
 
             model.addAttribute("schedule", schedule.entrySet());
-            model.addAttribute("buzzers", buzzersRepository.getAllBuzzers());
+            model.addAttribute("buzzers", buzzersRepository.findByOrderByPairNumber());
             model.addAttribute("selectForm", new StudentScheduleSelectForm(groupId, week));
         } else {
             model.addAttribute("selectForm", new StudentScheduleSelectForm());

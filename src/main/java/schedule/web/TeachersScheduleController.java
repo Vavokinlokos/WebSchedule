@@ -47,7 +47,7 @@ public class TeachersScheduleController {
                         teachersRepository.getTeacherById(teacherId), week, day));
 
                 model.addAttribute("schedule", schedule.entrySet());
-                model.addAttribute("buzzers", buzzersRepository.getAllBuzzers());
+                model.addAttribute("buzzers", buzzersRepository.findByOrderByPairNumber());
                 model.addAttribute("selectForm", new TeacherScheduleSelectForm(teacherId, week));
             }
         } else {

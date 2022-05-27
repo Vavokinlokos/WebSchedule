@@ -21,9 +21,11 @@ public class BuzzerOnPair {
     private Integer pairNumber;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
+    @NotNull(message = "Start time of pair shouldn't be empty")
     private LocalTime startTime;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
+    @NotNull(message = "End time of pair shouldn't be empty")
     private LocalTime endTime;
 
     public BuzzerOnPair() {

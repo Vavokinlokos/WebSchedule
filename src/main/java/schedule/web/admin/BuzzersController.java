@@ -29,7 +29,7 @@ public class BuzzersController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String index(Model model) {
-        model.addAttribute("buzzers", buzzersRepository.getAllBuzzers());
+        model.addAttribute("buzzers", buzzersRepository.findByOrderByPairNumber());
         model.addAttribute("currentTab", "buzzers");
         return "admin/buzzers/index";
     }
