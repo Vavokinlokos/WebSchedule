@@ -12,8 +12,9 @@ public class Group {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(unique = true)
     @NotNull
-    @Size(min = 2, max = 15)
+    @Size(min = 3, max = 4)
     private String name;
 
     @ManyToMany

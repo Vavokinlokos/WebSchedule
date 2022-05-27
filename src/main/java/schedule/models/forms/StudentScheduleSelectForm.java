@@ -20,6 +20,10 @@ public class StudentScheduleSelectForm {
         return selectedGroup;
     }
 
+    public void setSelectedGroup(Long selectedGroup) {
+        this.selectedGroup = selectedGroup;
+    }
+
     public Long getSelectedWeek() {
         return selectedWeek;
     }
