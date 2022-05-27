@@ -23,16 +23,6 @@
                     <select class="hidden" th:field="*{currentGroup}">
                         <option th:value="${currentGroup.id}" th:text="${currentGroup.name}"></option>
                     </select>
-                    <div th:class="${#fields.hasErrors('subGroup')}? 'form-group has-error': 'form-group'">
-                        <label th:for="subGroup" class="col-sm-4 control-label" th:text="#{subgroup}">Subgroup</label>
-                        <div class="col-sm-5">
-                            <select class="form-control" th:field="*{subGroup}">
-                                <option value="0" th:text="#{allSubgroups}">All subgroups</option>
-                                <option th:each="subgroup : ${#numbers.sequence(1, subgroupsCount)}"
-                                        th:value="${subgroup}" th:text="${subgroup}">Subgroup</option>
-                            </select>
-                        </div>
-                    </div>
                     <div th:class="${#fields.hasErrors('week')}? 'form-group has-error': 'form-group'">
                         <label th:for="week" class="col-sm-4 control-label" th:text="#{week}">Week</label>
                         <div class="col-sm-5">

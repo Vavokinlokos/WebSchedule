@@ -35,7 +35,7 @@ public class StudentsScheduleController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String selectGroupSubgroupAndDay(StudentScheduleSelectForm selectForm,
+    public String selectGroupAndDay(StudentScheduleSelectForm selectForm,
                                             HttpServletResponse response) {
         ArrayList<Cookie> cookies = new ArrayList<>();
 
@@ -59,7 +59,7 @@ public class StudentsScheduleController {
             HashMap<Long, List<Pair>> schedule = new HashMap<>();
 
             for (long day = 1; day <= days; day++) {
-                schedule.put(day, pairsRepository.getPairsByGroupSubgroupWeekAndDay(
+                schedule.put(day, pairsRepository.getPairsByGroupWeekAndDay(
                         groupsRepository.getGroupById(groupId), week, day));
             }
 

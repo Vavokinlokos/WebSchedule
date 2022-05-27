@@ -36,7 +36,6 @@
                         <th th:text="#{week}">Week</th>
                         <th th:text="#{day}">Day</th>
                         <th>#</th>
-                        <th th:text="#{subgroup}">Subgroup</th>
                         <th th:text="#{subject}">Subject</th>
                         <th th:text="#{type}">Type</th>
                         <th th:text="#{room}">room</th>
@@ -49,7 +48,6 @@
                         <td th:text="${pair.week}">Week</td>
                         <td th:text="${pair.day}">Day</td>
                         <td th:text="${pair.numberInDay}">#</td>
-                        <td th:text="${pair.subGroup}">Subgroup</td>
                         <td width="30%" th:text="${pair.subject.name} + '|' + ${pair.subject.teacher.name}">Subject</td>
                         <td th:text="${pair.type.name}">Type of pair</td>
                         <td th:text="${pair.room}">Room</td>

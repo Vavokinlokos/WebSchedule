@@ -20,13 +20,6 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="subGroupSelect" th:text="#{subgroup}">Subgroup:</label>
-                            <select id="subGroupSelect" th:field="*{selectedSubgroup}" name="selectedSubgroup" class="form-control">
-                                <option th:each="subgroup : ${#numbers.sequence(1, subgroupsCount)}"
-                                        th:value="${subgroup}" th:text="${subgroup}">Subgroup</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label for="weekSelect" th:text="#{week}">Week:</label>
                             <select id="weekSelect" th:field="*{selectedWeek}" name="selectedWeek" class="form-control">
                                 <option th:each="week : ${#numbers.sequence(startWeek, finalWeek)}"

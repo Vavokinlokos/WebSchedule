@@ -7,9 +7,6 @@ public class StudentScheduleSelectForm {
     private Long selectedGroup;
 
     @NotNull
-    private Long selectedSubgroup;
-
-    @NotNull
     private Long selectedWeek;
 
     public StudentScheduleSelectForm() { }
@@ -21,10 +18,6 @@ public class StudentScheduleSelectForm {
 
     public Long getSelectedGroup() {
         return selectedGroup;
-    }
-
-    public void setSelectedSubgroup(Long selectedSubgroup) {
-        this.selectedSubgroup = selectedSubgroup;
     }
 
     public Long getSelectedWeek() {

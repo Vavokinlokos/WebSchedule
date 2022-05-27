@@ -7,11 +7,6 @@
         <div class="center-block center-wrapper">
             <div class="navbar-header">
                 <a class="navbar-brand logo" th:href="@{/}">Schedule</a>
-                <ul class="visible-xs mobileLanguageSelect">
-                    <li><a th:href="@{?lang=en}">English</a></li>
-                    <li><a th:href="@{?lang=ru}">Russian</a></li>
-                    <li><a th:href="@{?lang=ua}">Ukrainian</a></li>
-                </ul>
             </div>
             <div>
                 <ul class="nav navbar-nav">
@@ -19,11 +14,6 @@
                     <li><a th:href="@{/forTeachers}" th:text="#{mainMenu.forTeachers}">For teachers</a></li>
                     <li><a th:href="@{/exams}" th:text="#{mainMenu.exams}">Exams</a></li>
                     <li sec:authorize="isAuthenticated()"><a class="logout" th:href="@{/logout}" th:text="#{login.logout}">Logout</a></li>
-                </ul>
-                <ul class="nav navbar-nav languageSelect hidden-xs">
-                    <li><a th:href="@{?lang=en}"><img class="languageImg" th:src="@{/static/img/en.gif}" alt="English"/></a></li>
-                    <li><a th:href="@{?lang=ru}"><img class="languageImg" th:src="@{/static/img/ru.gif}" alt="Русский"/></a></li>
-                    <li><a th:href="@{?lang=ua}"><img class="languageImg" th:src="@{/static/img/ua.gif}" alt="Українська"/></a></li>
                 </ul>
             </div>
         </div>

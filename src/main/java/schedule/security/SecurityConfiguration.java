@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.servlet.configuration.
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
-//@EnableWebMvcSecurity
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {

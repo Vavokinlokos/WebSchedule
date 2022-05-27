@@ -17,10 +17,6 @@ public class Pair {
     private Group currentGroup;
 
     @NotNull
-    @Min(0)
-    private Long subGroup;
-
-    @NotNull
     @Min(1)
     private Long week;
 
@@ -46,9 +42,8 @@ public class Pair {
 
     public Pair() { }
 
-    public Pair(Group currentGroup, Long subGroup, Long week, Long day, Long numberInDay, Subject subject, TypeOfPair type, String room) {
+    public Pair(Group currentGroup, Long week, Long day, Long numberInDay, Subject subject, TypeOfPair type, String room) {
         this.currentGroup = currentGroup;
-        this.subGroup = subGroup;
         this.week = week;
         this.day = day;
         this.numberInDay = numberInDay;
@@ -71,14 +66,6 @@ public class Pair {
 
     public void setCurrentGroup(Group currentGroup) {
         this.currentGroup = currentGroup;
-    }
-
-    public Long getSubGroup() {
-        return subGroup;
-    }
-
-    public void setSubGroup(Long subGroup) {
-        this.subGroup = subGroup;
     }
 
     public Long getWeek() {
