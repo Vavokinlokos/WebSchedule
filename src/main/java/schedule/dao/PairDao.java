@@ -17,7 +17,7 @@ public interface PairDao extends JpaRepository<Pair, Long> {
     void delete(Pair pair);
 
     @Query("select p from Pair p")
-    List<Pair> getAllPairs(Pair pair);
+    List<Pair> getAllPairs();
 
     @Query("select p from Pair p where p.currentGroup=:group_id")
     List<Pair> getPairsByGroup(@Param("group_id") Group group_id);
