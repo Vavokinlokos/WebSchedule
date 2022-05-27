@@ -15,6 +15,7 @@ public class BuzzerOnPair {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(unique = true)
     @NotNull
     @Min(value = 1)
     @Max(10)
